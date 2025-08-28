@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pengantar Web Mining &#8212; PPW</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pengantar_web_mining';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Crawling" href="Crawling.html" />
+    <link rel="prev" title="Profile" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="PPW - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="PPW - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pengantar Web Mining</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Crawling.html">Crawling</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpengantar_web_mining.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pengantar_web_mining.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pengantar Web Mining</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pengantar Web Mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan-dalam-pemrosesan-data-web">Tantangan Dalam Pemrosesan Data Web</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-isi-web-content-mining">Penambangan Isi Web (Content Mining)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-teks-mining">Aplikasi Teks Mining</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dokumen-content-mining">Klasifikasi Dokumen (Content Mining)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-aplikasi">Contoh Aplikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-yang-digunakan">Metode yang Digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-konten-content-clustering">Pengelompokan Konten (Content Clustering)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-clustering">Tujuan Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-clustering">Aplikasi Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-yang-digunakan">Teknik yang digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-sentimen">Analisa Sentimen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">Web Usage Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-clickstream-analysis">Tahapan Clickstream Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-dari-web-usage-mining">Aplikasi dari Web Usage Mining</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-struktur-web">Penambangan Struktur Web</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penemuan-dan-interprestasi-pola-dalam">Penemuan dan interprestasi pola dalam :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-graph-web">Sumber graph web</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-web-struktur-mining">Aplikasi web struktur mining</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-simpul-penting">Identifikasi simpul penting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-komunitas">Deteksi komunitas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">Proses Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gathering-and-exploration">Gathering and exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-transformation">Preprocessing and transformation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-data-mining">Actual data mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-teks-text-mining">Penambangan Teks (Text Mining)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pengantar-web-mining">
+<h1>Pengantar Web Mining<a class="headerlink" href="#pengantar-web-mining" title="Link to this heading">#</a></h1>
+<section id="pengertian">
+<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<p>Penambangan web atau web mining merupakan cara mendapatkan serta mengekstrak informasi dari internet menggunakan berbagai metode penambangan data. Sehingga informasi yang didapatkan bisa dimanfaatkan oleh perusahaan untuk pengambilan keputusan yang efektif.</p>
+<p>Berikut merupakan beberapa pengertian penambangan web menurut ahli:</p>
+<p>Penambangan web adalah penggunaan teknik penambangan data untuk secara otomatis menemukan dan mengekstrak informasi dari layanan web (Etzioni, 1996; CACM 39).</p>
+<p>Penambangan web bertujuan untuk menemukan pola-pola berguna atau pengetahuan dari struktur hiperlink web, isi halaman web, serta perilaku pengguna. (Bing Liu, 2007, Web Data Mining).</p>
+</section>
+<section id="tantangan-dalam-pemrosesan-data-web">
+<h2>Tantangan Dalam Pemrosesan Data Web<a class="headerlink" href="#tantangan-dalam-pemrosesan-data-web" title="Link to this heading">#</a></h2>
+<p>Web merupakan pangkalan data besar yang menyimpan informasi dalam berbagai format, seperti HTML, XML, maupun teks. Namun, pemrosesan data dari web menghadirkan beberapa tantangan seperti:</p>
+<ul class="simple">
+<li><p>Web memiliki ukuran yang besar sehingga dapat membuat proses web mining menjadi sangat kompleks.</p></li>
+<li><p>Web bersifat dinamis karena konten di dalamnya terus berubah dan diperbarui.</p></li>
+<li><p>Web tidak terpaut pada satu domain tertentu, melainkan mencakup hampir segala aspek kehidupan</p></li>
+</ul>
+</section>
+<section id="penambangan-isi-web-content-mining">
+<h2>Penambangan Isi Web (Content Mining)<a class="headerlink" href="#penambangan-isi-web-content-mining" title="Link to this heading">#</a></h2>
+<p>Proses web mining berfokus pada upaya mengekstak informasi yang bermanfaat dari berbagai dokumen yang terdapat di web internet. Informasi tersebut dapat berasal dari berbagai jenis konten dalam halaman web seperti :</p>
+<ul class="simple">
+<li><p>Text mining, sistem dapat menggali informasi dari artikel, deskripsi, maupun komentar.</p></li>
+<li><p>Image mining digunakan untuk menganalisis data citra seperti foto dan ilustrasi.</p></li>
+<li><p>Audio mining, data dalam bentuk audio misalnya pada rekaman suara atau musik.</p></li>
+<li><p>Video mining, memungkinkan penggalian informasi dari konten video seperti klip atu siaran streaming,</p></li>
+<li><p>Data terstuktur, misalnya tabel atau daftar yang dapat dilakukan melalui proses ekstraksi.</p></li>
+</ul>
+<section id="aplikasi-teks-mining">
+<h3>Aplikasi Teks Mining<a class="headerlink" href="#aplikasi-teks-mining" title="Link to this heading">#</a></h3>
+<p>Ekstraksi informasi dari dokumen web dapat dilakukan dengan berbagai teknik, berikut beberapa teknik yang dapat dilakukan :</p>
+<ul class="simple">
+<li><p>Topic modelling, yaitu metode untuk menemukan topik utama yang terkandug dalam sekumpulan dokumen.</p></li>
+<li><p>Peringkas dokumen, yang bertujuan menyajikan inti informasi dari sebuah teks panjang menjadi lebih ringkas.</p></li>
+<li><p>Klasisifikasi dokumen, misalnya dalam bentuk analisis sentimen atau opinion mining, untuk mengetahui apakah suatu teks bernada positif, negatif, dan netral.</p></li>
+<li><p>Pengelompokan dokumen, yang sering dimanfaatkan dalam sistem rekomendasi.</p></li>
+<li><p>Ekstraksi kata kunci, yaitu upaya menemukan kata atau frasa yang paling merepresentasikan isi dari suatu dokumen.</p></li>
+</ul>
+</section>
+</section>
+<section id="klasifikasi-dokumen-content-mining">
+<h2>Klasifikasi Dokumen (Content Mining)<a class="headerlink" href="#klasifikasi-dokumen-content-mining" title="Link to this heading">#</a></h2>
+<p>Klasifikasi dokumen dilakukan untuk mengelompokkan dokumen atau gambar yang belum pernah dilihat sebelumnya ke dalam kelas atau kategori tertentu dengan tingkat akurasi yang tinggi.</p>
+<section id="contoh-aplikasi">
+<h3>Contoh Aplikasi<a class="headerlink" href="#contoh-aplikasi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Kategorisasi berita berdasarkan topiknya.</p></li>
+<li><p>Kategorisasi produk dalam e-commerce.</p></li>
+<li><p>Deteksi spam pada email atau pesan.</p></li>
+</ul>
+</section>
+<section id="metode-yang-digunakan">
+<h3>Metode yang Digunakan<a class="headerlink" href="#metode-yang-digunakan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Naive Bayes</p></li>
+<li><p>Support Vector Machines (SVM)</p></li>
+<li><p>Jaringan saraf tiruan (neural networks)</p></li>
+<li><p>Transformers</p></li>
+</ul>
+</section>
+</section>
+<section id="pengelompokan-konten-content-clustering">
+<h2>Pengelompokan Konten (Content Clustering)<a class="headerlink" href="#pengelompokan-konten-content-clustering" title="Link to this heading">#</a></h2>
+<section id="tujuan-clustering">
+<h3>Tujuan Clustering<a class="headerlink" href="#tujuan-clustering" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Mengelompokkan dokumen berdasarkan Tingkat kemiripan.</p></li>
+<li><p>Dokumen dalam satu kelompok memiliki kesamaan yang tinggi.</p></li>
+<li><p>Dokumen antar kelompok berbeda memiliki kesamaan yang rendah.</p></li>
+</ul>
+</section>
+<section id="aplikasi-clustering">
+<h3>Aplikasi Clustering<a class="headerlink" href="#aplikasi-clustering" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pengelompokan hasil pencarian (search result clustering)</p></li>
+<li><p>Penemuan topik baru (topik discovery)</p></li>
+</ul>
+</section>
+<section id="teknik-yang-digunakan">
+<h3>Teknik yang digunakan<a class="headerlink" href="#teknik-yang-digunakan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Algoritma : dapat menggunakan K-Means, pengelompokkan hierarkirs (hierarchical clustering), S-BERT.</p></li>
+<li><p>Ukuran kesamaan: cosine similarity, jaccard similarity, dan kesamaan embedding (similarity of embeddings).</p></li>
+</ul>
+</section>
+</section>
+<section id="analisa-sentimen">
+<h2>Analisa Sentimen<a class="headerlink" href="#analisa-sentimen" title="Link to this heading">#</a></h2>
+<p>Tugas utama analisis sentiment yakni menentukan polaritas dari teks, baik pada tingkat dokumen, kalimat, maupun fitur/atribut tertentu. Kategori polaritas yang umum digunakan yaitu positif, netral, dan negatif.</p>
+<p>Contoh aplikasi mencakup:</p>
+<ul class="simple">
+<li><p>Prediksi suara (vote) berdasarkan tweet, misalnya untuk mengetahui pendapat publik terkait isu politik.</p></li>
+<li><p>Analisa utama produk, misalnya untuk mengidentifikasi apakah pelanggan merasa puas terhadap kualitas layanan, desainn, maupun harga.</p></li>
+</ul>
+</section>
+<section id="web-usage-mining">
+<h2>Web Usage Mining<a class="headerlink" href="#web-usage-mining" title="Link to this heading">#</a></h2>
+<p>Ekstraksi informasi merupakan pengambilan informasi terstruktur dari konten web yang umumnya tidak terstruktur atau semi-structured, dimana tujuannya ialah menyusun informasi penting menjadi lebih terorganisir.
+Ekstraksi informasi dapat dilakukan terhadap berbagai jenis data yang dihasilkan melalui kunjungan halaman web dan transaksi pengguna. Data tersebut mencakup log akses server, log referer, log agen, serta cookie sisi klien. Dari sumber ini dapat diperoleh karakteristik pengguna dan profil penggunaan. Selain itu tersedia juga metadata yang meliputi atribut halaman, atribut konten, hingga data penggunaa. Juga ada data clickstream, yaitu catatan  urutan klik pengguna ketika menjelajahi situs web. Selanjutnya, analisis cliskstream yang digunakan untuk mengidentifikasi pola perilaku pengguna berdasarkan interaksi tersebut.</p>
+<section id="tahapan-clickstream-analysis">
+<h3>Tahapan Clickstream Analysis<a class="headerlink" href="#tahapan-clickstream-analysis" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pre-process data: mengumpulkan, menggabungkan, membersihkan, serta menyusun data untuk mengidentifikasi pengguna, sesi, jumlah kunjungan halaman web, dan kunjungan keseluruhan.</p></li>
+<li><p>Extract knowledge: menghasilkan wawasan berupa usage patterns, user profiles, pege profiles, visit profiles, dan customer value.</p></li>
+<li><p>Hasil analisis digunakan untuk meningkatkan kualitas data, memperbaiki desai situs web, serta meningkatkan nilai pelanggan.</p></li>
+</ul>
+</section>
+<section id="aplikasi-dari-web-usage-mining">
+<h3>Aplikasi dari Web Usage Mining<a class="headerlink" href="#aplikasi-dari-web-usage-mining" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Product recommendation: memprediksi juga menyarankan produk yang paling populer atau diminati oleh penggunka, berdasarkan data pengguna yang memuat perilaku, preferensi, atau kesamaan dengan pengguna yang lain.</p></li>
+<li><p>Personalized search: metode pencarian informasi dengan hasil pencarian yang disesuaikan dengan preferensi, perilaku, dan konteks pengguna individu.</p></li>
+</ul>
+</section>
+</section>
+<section id="penambangan-struktur-web">
+<h2>Penambangan Struktur Web<a class="headerlink" href="#penambangan-struktur-web" title="Link to this heading">#</a></h2>
+<section id="penemuan-dan-interprestasi-pola-dalam">
+<h3>Penemuan dan interprestasi pola dalam :<a class="headerlink" href="#penemuan-dan-interprestasi-pola-dalam" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Struktur tautan (hyperlink) di internet.</p></li>
+<li><p>Hubungan sosial antar pelaku atau aktor yang berinteraksi pada web.</p></li>
+</ul>
+</section>
+<section id="sumber-graph-web">
+<h3>Sumber graph web<a class="headerlink" href="#sumber-graph-web" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pencarian web (web crawls) termasuk halaman HTML dan tautan (hyperlink).</p></li>
+<li><p>Jaringan sosialn yang mencakup hubungan eksplisit antar pengguna</p></li>
+<li><p>Jenus data komunitas lainnya</p></li>
+</ul>
+</section>
+<section id="aplikasi-web-struktur-mining">
+<h3>Aplikasi web struktur mining<a class="headerlink" href="#aplikasi-web-struktur-mining" title="Link to this heading">#</a></h3>
+<p>Grafik web merupakan representasi visual dimana setiap halaman web digambarkan sebagai simpul(node), sedangkan hyperlink digambarkan sebagai sisi(edge). Analisis terhadap struktur grafik web dapat digunakan untuk berbagai tujuan, misalnya:</p>
+<ul class="simple">
+<li><p>menentukan otoritas halaman melalui algoritma pagerank,</p></li>
+<li><p>mendeteksi komunitas online,</p></li>
+<li><p>serta menganalisis jaringan sosial digital.</p></li>
+</ul>
+</section>
+<section id="identifikasi-simpul-penting">
+<h3>Identifikasi simpul penting<a class="headerlink" href="#identifikasi-simpul-penting" title="Link to this heading">#</a></h3>
+<p>Siapa aktor penting dalam web ?
+Centrality merupakan konsep analisis jaringan yang digunakan untuk mengidentifikasi simpul atau halaman yang paling penting dalam suatu jaringan. Penerapannya mencakup pencarian halaman web seperti sutus berita utama, mengenali pengguna yang beperan sebagai influencer di mesia sosial, serta mendeteksi sumber informasi yang terpercaya.</p>
+</section>
+<section id="implementasi">
+<h3>Implementasi<a class="headerlink" href="#implementasi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>google search : menggunakan sistem rangking untuk menentukan urutan hasil pencarian.</p></li>
+<li><p>twitter/instagram : menampilkan akun influencer pada rekomendasi.</p></li>
+<li><p>analisis jaringan sosial : mencari pemimpin komunitas atau penyebar berita palsu.</p></li>
+</ul>
+</section>
+<section id="deteksi-komunitas">
+<h3>Deteksi komunitas<a class="headerlink" href="#deteksi-komunitas" title="Link to this heading">#</a></h3>
+<p>Komunitas merupakan himpunan aktor yang saling berinteraksi lebih sering. Deteksi komunitas berarti proses menemukan kelompok aktor dalam jaringan sosial yang saling berinteraksi lebih sering dibandingkan dengan aktor di luar kelompok tersebut.
+Teknik yang dapat dilakukan dapat menggunakan metode seperti Components atau K-Cores. Hasil deteksi komunitas biasanya dimanfaatkan dalam berbagai aplikasi, misalnya untuk sistem rekomendasi berbasis komunitas ataupun visualisasi jaringan.</p>
+</section>
+</section>
+<section id="proses-web-mining">
+<h2>Proses Web Mining<a class="headerlink" href="#proses-web-mining" title="Link to this heading">#</a></h2>
+<section id="gathering-and-exploration">
+<h3>Gathering and exploration<a class="headerlink" href="#gathering-and-exploration" title="Link to this heading">#</a></h3>
+<p>Di tahap pertama ini adalah pengumpulan dan eksplorasi data, dimana data diperoleh melalui crawling memanfaatkan web API. Kemudian data dieksplorasi dengan memahami data, membuat ringkasan statistic, dan terakhir membuat visualisasi data.</p>
+</section>
+<section id="preprocessing-and-transformation">
+<h3>Preprocessing and transformation<a class="headerlink" href="#preprocessing-and-transformation" title="Link to this heading">#</a></h3>
+<p>Pada tahap ini data mentah akan diubah menjadi representasi yang sesuai untuk metode data mining. Dalam proses ini terdapat reduksi dimensi, seleksi fitur, diskritasi atau binarisasi, serta transformasi teks ke bentuk vektor dan integrasi dari berbagai sumer data. Ini merupakan tahap paling penting karena bisa memakan waktu 70-80% dari waktu pemrosesan, dan kualitas persiapan data sangat menentukan validitas model yang dihasilkan.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="actual-data-mining">
+<h1>Actual data mining<a class="headerlink" href="#actual-data-mining" title="Link to this heading">#</a></h1>
+<p>Tahap ini merupakan penerapan metode data mining pada data yang sudah diproses. Hasilnya berupa model atau pola yang kemudian dievaluasi. Tahap ini bersitaf iteratif atau berulang, memperbaiki tahap pra-pemrosesan, meningkatkan kualitas dan jumlah data lati. Tujuannya untuk memperoleh model yang optimal dan dapat memberi wawasan yang bermanfaat.</p>
+<section id="penambangan-teks-text-mining">
+<h2>Penambangan Teks (Text Mining)<a class="headerlink" href="#penambangan-teks-text-mining" title="Link to this heading">#</a></h2>
+<p>Penambangan teks adalah proses memperoleh informasi bernilai atau berkualitas dari data berbentuk teks. Beberapa tugas utama dari penambangan teks adalah klasifikasi atau kategorisasi teks, pengelompokan (clustering), ekstraksi konsep atau entitas serta topic modelling, analisis sentimen, hingga peringkasan dokumen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jupyter-book
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.1.1</span> -&gt; <span class=" -Color -Color-Green">25.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">python3 -m pip install --upgrade pip</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buat proyek bernama &#39;book&#39;</span>
+<span class="o">!</span>rm<span class="w"> </span>-rf<span class="w"> </span>book
+<span class="o">!</span>jupyter-book<span class="w"> </span>create<span class="w"> </span>book
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===============================================================================
+
+Your book template can be found at
+
+    book/
+
+===============================================================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mv<span class="w"> </span>profil.*<span class="w"> </span>book/<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter-book<span class="w"> </span>build<span class="w"> </span>book
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">Running Jupyter-Book v1.0.4.post1</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Source Folder: </span>/workspaces/PPW/ppw/book
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Config Path: </span>/workspaces/PPW/ppw/book/_config.yml
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Output Path: </span>/workspaces/PPW/ppw/book/_build/html
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Running Sphinx v7.4.7</span>
+<span class=" -Color -Color-Bold">loading translations [en]... </span>done
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">making output directory... </span>done
+[etoc] Changing master_doc to &#39;intro&#39;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>checking bibtex cache... out of date
+parsing bibtex file /workspaces/PPW/ppw/book/references.bib... parsed 5 entries
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">myst v3.0.1:</span> MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions={&#39;substitution&#39;, &#39;linkify&#39;, &#39;colon_fence&#39;, &#39;tasklist&#39;, &#39;dollarmath&#39;}, disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=(&#39;mailto&#39;, &#39;http&#39;, &#39;https&#39;), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes=&#39;tex2jax_process|mathjax_process|math|output_area&#39;, enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+<span class=" -Color -Color-Bold">myst-nb v1.3.0:</span> NbParserConfig(custom_formats={}, metadata_key=&#39;mystnb&#39;, cell_metadata_key=&#39;mystnb&#39;, kernel_rgx_aliases={}, eval_name_regex=&#39;^[a-zA-Z_][a-zA-Z0-9_]*$&#39;, execution_mode=&#39;force&#39;, execution_cache_path=&#39;&#39;, execution_excludepatterns=[], execution_timeout=30, execution_in_temp=False, execution_allow_errors=False, execution_raise_on_error=False, execution_show_tb=False, merge_streams=False, render_plugin=&#39;default&#39;, remove_code_source=False, remove_code_outputs=False, scroll_outputs=False, code_prompt_show=&#39;Show code cell {type}&#39;, code_prompt_hide=&#39;Hide code cell {type}&#39;, number_source_lines=False, output_stderr=&#39;show&#39;, render_text_lexer=&#39;myst-ansi&#39;, render_error_lexer=&#39;ipythontb&#39;, render_image_options={}, render_figure_options={}, render_markdown_format=&#39;commonmark&#39;, output_folder=&#39;build&#39;, append_css=True, metadata_to_fm=False)
+Using jupyter-cache at: /workspaces/PPW/ppw/book/_build/.jupyter_cache
+<span class=" -Color -Color-Bold">sphinx-multitoc-numbering v0.1.3:</span> Loaded
+<span class=" -Color -Color-Bold">building [mo]: </span>targets for 0 po files that are out of date
+<span class=" -Color -Color-Bold">writing output... </span>
+<span class=" -Color -Color-Bold">building [html]: </span>targets for 4 source files that are out of date
+<span class=" -Color -Color-Bold">updating environment: </span>[new config] 4 added, 0 changed, 0 removed
+<span class=" -Color -Color-Bold">reading sources... </span>[ 25%] <span class=" -Color -Color-Magenta">intro</span>
+<span class=" -Color -Color-Bold">reading sources... </span>[ 50%] <span class=" -Color -Color-Magenta">markdown</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">reading sources... </span>[ 75%] <span class=" -Color -Color-Magenta">markdown-notebooks</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/workspaces/PPW/ppw/book/markdown-notebooks.md: Executing notebook using local CWD [mystnb]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/workspaces/PPW/ppw/book/markdown-notebooks.md: Executed notebook in 1.02 seconds [mystnb]
+<span class=" -Color -Color-Bold">reading sources... </span>[100%] <span class=" -Color -Color-Magenta">notebooks</span>
+/workspaces/PPW/ppw/book/notebooks.ipynb: Executing notebook using local CWD [mystnb]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/workspaces/PPW/ppw/book/notebooks.ipynb: Executed notebook in 1.82 seconds [mystnb]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">looking for now-outdated files... </span>none found
+<span class=" -Color -Color-Bold">pickling environment... </span>done
+<span class=" -Color -Color-Bold">checking consistency... </span>done
+<span class=" -Color -Color-Bold">preparing documents... </span>done
+<span class=" -Color -Color-Bold">copying assets... </span>
+<span class=" -Color -Color-Bold">copying static files... </span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
+<span class=" -Color -Color-Bold">copying extra files... </span>done
+<span class=" -Color -Color-Bold">copying assets: </span>done
+<span class=" -Color -Color-Bold">writing output... </span>[ 25%] <span class=" -Color -Color-Green">intro</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">writing output... </span>[ 50%] <span class=" -Color -Color-Green">markdown</span>
+<span class=" -Color -Color-Bold">writing output... </span>[ 75%] <span class=" -Color -Color-Green">markdown-notebooks</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">writing output... </span>[100%] <span class=" -Color -Color-Green">notebooks</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">generating indices... </span>genindex 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
+<span class=" -Color -Color-Bold">writing additional pages... </span>search done
+<span class=" -Color -Color-Bold">copying images... </span>[100%] <span class=" -Color -Color-Yellow">_build/jupyter_execute/296a7adda50947ec512bb802f2a805de61ab50016fac4496910d5dd151b10b9e.png</span>
+
+<span class=" -Color -Color-Bold">dumping search index in English (code: en)... </span>done
+<span class=" -Color -Color-Bold">dumping object inventory... </span>done
+[etoc] missing index.html written as redirect to &#39;intro.html&#39;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">build succeeded.</span>
+
+The HTML pages are in book/_build/html.
+
+===============================================================================
+
+Finished generating HTML for book.
+Your book&#39;s HTML pages are here:
+    book/_build/html/
+You can look at your book by opening this file in a browser:
+    book/_build/html/index.html
+Or paste this line directly into your browser bar:
+    file:///workspaces/PPW/ppw/book/_build/html/index.html            
+
+===============================================================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> book/_build/html
+<span class="o">!</span>touch<span class="w"> </span>.nojekyll<span class="w">     </span>#<span class="w"> </span>Wajib:<span class="w"> </span>supaya<span class="w"> </span>GitHub<span class="w"> </span>Pages<span class="w"> </span>tidak<span class="w"> </span>menjalankan<span class="w"> </span>Jekyll
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/workspaces/PPW/ppw/book/_build/html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>init
+<span class="o">!</span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;amelialestari6268@gmail.com&quot;</span>
+<span class="o">!</span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;AmeliaPutriL&quot;</span>
+<span class="o">!</span>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+<span class="o">!</span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/AmeliaPutriL/ppw.git
+<span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial deploy: hasil build Jupyter Book&quot;</span>
+<span class="o">!</span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initialized empty Git repository in /workspaces/PPW/ppw/book/_build/html/.git/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 6c65f01] Initial deploy: hasil build Jupyter Book
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 165 files changed, 12813 insertions(+)
+ create mode 100644 .buildinfo
+ create mode 100644 .nojekyll
+ create mode 100644 _images/296a7adda50947ec512bb802f2a805de61ab50016fac4496910d5dd151b10b9e.png
+ create mode 100644 _sources/intro.md
+ create mode 100644 _sources/markdown-notebooks.md
+ create mode 100644 _sources/markdown.md
+ create mode 100644 _sources/notebooks.ipynb
+ create mode 100644 _sphinx_design_static/design-tabs.js
+ create mode 100644 _sphinx_design_static/sphinx-design.min.css
+ create mode 100644 _static/basic.css
+ create mode 100644 _static/check-solid.svg
+ create mode 100644 _static/clipboard.min.js
+ create mode 100644 _static/copy-button.svg
+ create mode 100644 _static/copybutton.css
+ create mode 100644 _static/copybutton.js
+ create mode 100644 _static/copybutton_funcs.js
+ create mode 100644 _static/design-tabs.js
+ create mode 100644 _static/doctools.js
+ create mode 100644 _static/documentation_options.js
+ create mode 100644 _static/file.png
+ create mode 100644 _static/images/logo_binder.svg
+ create mode 100644 _static/images/logo_colab.png
+ create mode 100644 _static/images/logo_deepnote.svg
+ create mode 100644 _static/images/logo_jupyterhub.svg
+ create mode 100644 _static/language_data.js
+ create mode 100644 _static/locales/ar/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ar/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/bg/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/bg/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/bn/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/bn/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ca/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ca/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/cs/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/cs/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/da/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/da/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/de/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/de/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/el/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/el/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/eo/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/eo/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/es/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/es/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/et/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/et/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/fi/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/fi/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/fr/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/fr/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/hr/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/hr/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/id/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/id/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/it/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/it/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/iw/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/iw/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ja/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ja/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ko/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ko/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/lt/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/lt/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/lv/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/lv/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ml/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ml/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/mr/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/mr/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ms/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ms/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/nl/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/nl/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/no/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/no/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/pl/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/pl/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/pt/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/pt/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ro/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ro/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ru/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ru/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/sk/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/sk/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/sl/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/sl/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/sr/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/sr/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/sv/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/sv/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ta/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ta/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/te/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/te/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/tg/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/tg/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/th/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/th/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/tl/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/tl/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/tr/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/tr/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/uk/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/uk/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/ur/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/ur/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/vi/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/vi/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/zh_CN/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/zh_CN/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/locales/zh_TW/LC_MESSAGES/booktheme.mo
+ create mode 100644 _static/locales/zh_TW/LC_MESSAGES/booktheme.po
+ create mode 100644 _static/logo.png
+ create mode 100644 _static/minus.png
+ create mode 100644 _static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css
+ create mode 100644 _static/play-solid.svg
+ create mode 100644 _static/plus.png
+ create mode 100644 _static/pygments.css
+ create mode 100644 _static/sbt-webpack-macros.html
+ create mode 100644 _static/scripts/bootstrap.js
+ create mode 100644 _static/scripts/bootstrap.js.LICENSE.txt
+ create mode 100644 _static/scripts/bootstrap.js.map
+ create mode 100644 _static/scripts/pydata-sphinx-theme.js
+ create mode 100644 _static/scripts/pydata-sphinx-theme.js.map
+ create mode 100644 _static/scripts/sphinx-book-theme.js
+ create mode 100644 _static/scripts/sphinx-book-theme.js.map
+ create mode 100644 _static/searchtools.js
+ create mode 100644 _static/sphinx-design.min.css
+ create mode 100644 _static/sphinx-thebe.css
+ create mode 100644 _static/sphinx-thebe.js
+ create mode 100644 _static/sphinx_highlight.js
+ create mode 100644 _static/styles/bootstrap.css
+ create mode 100644 _static/styles/bootstrap.css.map
+ create mode 100644 _static/styles/pydata-sphinx-theme.css
+ create mode 100644 _static/styles/pydata-sphinx-theme.css.map
+ create mode 100644 _static/styles/sphinx-book-theme.css
+ create mode 100644 _static/styles/sphinx-book-theme.css.map
+ create mode 100644 _static/styles/theme.css
+ create mode 100644 _static/togglebutton.css
+ create mode 100644 _static/togglebutton.js
+ create mode 100644 _static/vendor/fontawesome/6.5.2/LICENSE.txt
+ create mode 100644 _static/vendor/fontawesome/6.5.2/css/all.min.css
+ create mode 100644 _static/vendor/fontawesome/6.5.2/js/all.min.js
+ create mode 100644 _static/vendor/fontawesome/6.5.2/js/all.min.js.LICENSE.txt
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.ttf
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.ttf
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.ttf
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.ttf
+ create mode 100644 _static/vendor/fontawesome/6.5.2/webfonts/fa-v4compatibility.woff2
+ create mode 100644 _static/webpack-macros.html
+ create mode 100644 genindex.html
+ create mode 100644 index.html
+ create mode 100644 intro.html
+ create mode 100644 markdown-notebooks.html
+ create mode 100644 markdown.html
+ create mode 100644 notebooks.html
+ create mode 100644 objects.inv
+ create mode 100644 search.html
+ create mode 100644 searchindex.js
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>To https://github.com/AmeliaPutriL/ppw.git
+ <span class=" -Color -Color-Red">! [rejected]       </span> main -&gt; main (fetch first)
+<span class=" -Color -Color-Red">error: failed to push some refs to &#39;https://github.com/AmeliaPutriL/ppw.git&#39;</span>
+<span class=" -Color -Color-Yellow">hint: Updates were rejected because the remote contains work that you do not</span>
+<span class=" -Color -Color-Yellow">hint: have locally. This is usually caused by another repository pushing to</span>
+<span class=" -Color -Color-Yellow">hint: the same ref. If you want to integrate the remote changes, use</span>
+<span class=" -Color -Color-Yellow">hint: &#39;git pull&#39; before pushing again.</span>
+<span class=" -Color -Color-Yellow">hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Profile</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Crawling.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Crawling</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pengantar Web Mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tantangan-dalam-pemrosesan-data-web">Tantangan Dalam Pemrosesan Data Web</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-isi-web-content-mining">Penambangan Isi Web (Content Mining)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-teks-mining">Aplikasi Teks Mining</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dokumen-content-mining">Klasifikasi Dokumen (Content Mining)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-aplikasi">Contoh Aplikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-yang-digunakan">Metode yang Digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-konten-content-clustering">Pengelompokan Konten (Content Clustering)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-clustering">Tujuan Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-clustering">Aplikasi Clustering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-yang-digunakan">Teknik yang digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-sentimen">Analisa Sentimen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-usage-mining">Web Usage Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-clickstream-analysis">Tahapan Clickstream Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-dari-web-usage-mining">Aplikasi dari Web Usage Mining</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-struktur-web">Penambangan Struktur Web</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penemuan-dan-interprestasi-pola-dalam">Penemuan dan interprestasi pola dalam :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-graph-web">Sumber graph web</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-web-struktur-mining">Aplikasi web struktur mining</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-simpul-penting">Identifikasi simpul penting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-komunitas">Deteksi komunitas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-web-mining">Proses Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gathering-and-exploration">Gathering and exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-transformation">Preprocessing and transformation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-data-mining">Actual data mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-teks-text-mining">Penambangan Teks (Text Mining)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amelia Putri Lestari
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
